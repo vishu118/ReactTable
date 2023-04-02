@@ -1,18 +1,15 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
 
-const Head = () => {
-  const [displayInput, setdisplayInput] = useState(false);
+const Head = ({handleAddContact,handleAddData,displayInput,handleDisplay}) => {
+ 
 
-  const handleDisplay = () => {
-    setdisplayInput((displayInput) => !displayInput);
-  };
 
   return (
     <>
       <div className="head">
         <h1>User Data</h1>
         <div className="search">
-          <i class="fa-solid fa-magnifying-glass"></i>
+          <i className="fa-solid fa-magnifying-glass"></i>
           <input
             type="text"
             className="search-input"
@@ -26,14 +23,14 @@ const Head = () => {
         </div>
       </div>
       {displayInput && (
-        <form action="" className="input">
-          <input type="text" placeholder="Enter id" />
-          <input type="text" placeholder="Enter First Name" />
-          <input type="text" placeholder="Enter Last Name" />
-          <input type="email" placeholder="Enter your Email" />
-          <input type="text" placeholder="Enter Your Phone" />
+        <form action="" className="input" onSubmit = {handleAddData}>
+          <input type="text" name = "id" placeholder="Enter id" onChange = {handleAddContact}  />
+          <input type="text" name = "first_name" placeholder="Enter First Name" onChange = {handleAddContact} />
+          <input type="text" name = "last_name" placeholder="Enter Last Name" onChange = {handleAddContact} />
+          <input type="email" name = "email" placeholder="Enter your Email" onChange = {handleAddContact} />
+          <input type="text"  name = "phone" placeholder="Enter Your Phone" onChange = {handleAddContact} />
 
-          <button className="btn">Add</button>
+          <button className="btn" type="submit" >Add</button>
         </form>
       )}
     </>

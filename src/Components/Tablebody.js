@@ -1,6 +1,6 @@
 import React from "react";
 
-const Tablebody = ({ Data }) => {
+const Tablebody = ({ Contact }) => {
   return (
     <div>
       <table>
@@ -14,7 +14,7 @@ const Tablebody = ({ Data }) => {
           </tr>
         </thead>
         <tbody>
-          {Data.map((user) => {
+          {Contact.map((user) => {
             return (
               <tr key={user.id}>
                 <td>{user.id}</td>
