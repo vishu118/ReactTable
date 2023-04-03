@@ -8,6 +8,7 @@ function App() {
   const [displayInput, setdisplayInput] = useState(false);
   const [Contact, setContact] = useState(Data);
   const [ Sorted , setSorted] = useState({Sorted : "id" , reversed : false})
+ 
   const [NewContact, setNewContact] = useState({
     id: "",
     full_name: "",
@@ -82,6 +83,8 @@ function App() {
         handleAddContact={handleAddContact}
         handleAddData={handleAddData}
         handleDisplay={handleDisplay}
+        Data = {Data}
+        setContact={setContact}
      
       />
       <Tablebody 

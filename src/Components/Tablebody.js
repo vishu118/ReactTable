@@ -16,13 +16,13 @@ const Tablebody = ({ Contact, SortedById, SortedByFirstName, Sorted }) => {
           <tr>
             <th onClick={SortedById}>
               Id
-              {Sorted.Sorted === "id" ? renderArrow : null}
+              {Sorted.Sorted === "id" ? renderArrow() : null}
             </th>
             <th onClick={SortedByFirstName}>
               First Name
-              {Sorted.Sorted === "first_name" ? renderArrow : null}
+              {Sorted.Sorted === "first_name" ? renderArrow() : null}
             </th>
-            <th>Last Name</th>
+            <th>Last Name </th>
             <th>Email</th>
             <th>Phone</th>
           </tr>

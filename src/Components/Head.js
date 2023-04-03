@@ -1,7 +1,17 @@
-// import React, { useState } from "react";
+import React, { useState } from "react";
 
-const Head = ({handleAddContact,handleAddData,displayInput,handleDisplay}) => {
+const Head = ({handleAddContact,handleAddData,displayInput,handleDisplay,Data,setContact}) => {
  
+  const [searchContact,setsearchContact] = useState('')
+
+  const Search = (e)=>{
+    const matchedContact  = Data.filter((ele)=>{
+      return ele.first_name.toLowerCase().includes(e.target.value.toLowerCase())
+    })
+    setContact(matchedContact)
+    setsearchContact(e.target.value)
+  }
+
 
 
   return (
@@ -14,6 +24,8 @@ const Head = ({handleAddContact,handleAddData,displayInput,handleDisplay}) => {
             type="text"
             className="search-input"
             placeholder="Enter here to Search"
+            value = {searchContact}
+            onChange = {Search}
           />
         </div>
 
