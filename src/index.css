@@ -28,6 +28,7 @@ td,
 th {
   border: 1px solid #ddd;
   padding: 8px;
+
 }
 
 table tr:nth-child(even) {
@@ -44,6 +45,7 @@ th {
   text-align: left;
   background-color: #04aa6d;
   color: white;
+  cursor: pointer;
 }
 
 .input {

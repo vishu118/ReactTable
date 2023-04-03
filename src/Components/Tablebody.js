@@ -1,13 +1,13 @@
 import React from "react";
 
-const Tablebody = ({ Contact }) => {
+const Tablebody = ({ Contact,SortedById,SortedByFirstName }) => {
   return (
     <div>
       <table>
         <thead>
           <tr>
-            <th>Id</th>
-            <th>First Name</th>
+            <th onClick = {SortedById}>Id </th>
+            <th onClick = {SortedByFirstName}>First Name</th>
             <th>Last Name</th>
             <th>Email</th>
             <th>Phone</th>
