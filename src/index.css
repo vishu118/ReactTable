@@ -116,3 +116,11 @@ th {
 .fa-magnifying-glass {
   margin: 0 10px;
 }
+
+
+.fa-arrows-up-down{
+
+}
+.fa-arrows-up-down :hover{
+  display: flex;
+}

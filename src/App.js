@@ -3,6 +3,7 @@ import Data from "./Components/Data.json";
 import Head from "./Components/Head";
 import Tablebody from "./Components/Tablebody";
 
+
 function App() {
   const [displayInput, setdisplayInput] = useState(false);
   const [Contact, setContact] = useState(Data);
@@ -85,6 +86,7 @@ function App() {
       />
       <Tablebody 
         Contact={Contact}
+        Sorted = {Sorted}
         SortedById = {SortedById}
         SortedByFirstName = {SortedByFirstName}
 
