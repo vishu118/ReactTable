@@ -37,7 +37,8 @@ const Head = ({handleAddContact,handleAddData,displayInput,handleDisplay,Data,se
       {displayInput && (
         <form action="" className="input" onSubmit = {handleAddData}>
           <input type="text" name = "id" placeholder="Enter id" onChange = {handleAddContact}  />
-          <input type="text" name = "full_name" placeholder="Enter First Name" onChange = {handleAddContact} />
+          <input type="text" name = "first_name" placeholder="Enter First Name" onChange = {handleAddContact} />
+          <input type="text" name = "last_name" placeholder="Enter First Name" onChange = {handleAddContact} />
           <input type="email" name = "email" placeholder="Enter your Email" onChange = {handleAddContact} />
           <input type="text"  name = "phone" placeholder="Enter Your Phone" onChange = {handleAddContact} />
 

@@ -38,7 +38,7 @@ function App() {
 
     const ContactToAdd = {
       id: NewContact.id,
-      full_name: NewContact.first_name,
+      first_name: NewContact.first_name,
       last_name: NewContact.last_name,
       email: NewContact.email,
       phone: NewContact.phone,
@@ -47,6 +47,7 @@ function App() {
     const New = [...Contact, ContactToAdd];
     setContact(New);
     setdisplayInput(false);
+    setNewContact('')
   };
 
   const SortedById = () => {
